@@ -23,8 +23,8 @@ const DeliciousRecipies = () => {
 
     return (
         <div className="py-5">
-            <h2 className="text-center fs-1 text-color">Delicious Recipies</h2>
-            <p className="text-center w-50 mx-auto mb-5 text-color">
+            <h2 className="text-center fs-1">Delicious Recipies</h2>
+            <p className="text-center w-50 mx-auto mb-5">
                 All recipies are handmaded and Popular in my website as clinet review. This all recipies are special for me as a cooking enthusiast.
             </p>
             <div className="container">
