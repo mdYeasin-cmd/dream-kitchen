@@ -1,5 +1,6 @@
 .active-nav {
-    background-color: blue !important;
+    color: #0D6EFD !important;
+    border-bottom: 2px solid #0D6EFD;
 }
 
 .logo-img {

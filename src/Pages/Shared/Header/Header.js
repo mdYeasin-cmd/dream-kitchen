@@ -11,12 +11,12 @@ const Header = () => {
     const navbarStatus = () => {
         return ({ isActive }) =>
             isActive ?
-                'nav-link fw-semibold text-white rounded' :
+                'nav-link active-nav fw-semibold rounded' :
                 'nav-link fw-semibold';
     }
 
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar className="py-3" bg="light" expand="lg">
             <Container>
                 <Navbar.Brand href="#home">
                     <img className="logo-img me-2" src={logo} alt="" />
