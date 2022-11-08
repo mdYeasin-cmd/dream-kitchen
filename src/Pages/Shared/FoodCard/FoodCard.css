@@ -1,0 +1,8 @@
+.card-image {
+    height: 260px;
+    border-radius: 30px !important;
+}
+
+.food-card {
+    border: none !important;
+}
