@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
-import logo from './../../../assets/logo/logo.png';
+import logo from './../../../assets/Logo/logo.png';
 
 const Header = () => {
 
