@@ -15,10 +15,6 @@ export const routes = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path: '/home',
-                element: <Home></Home>
-            },
-            {
                 path: '/addNewFood',
                 element: <AddNewFood></AddNewFood>
             },

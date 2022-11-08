@@ -11,8 +11,8 @@ const Header = () => {
     const navbarStatus = () => {
         return ({ isActive }) =>
             isActive ?
-                'nav-link bg-primary' :
-                'nav-link';
+                'nav-link fw-semibold text-white rounded' :
+                'nav-link fw-semibold';
     }
 
     return (
@@ -25,7 +25,7 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
-                        <NavLink to="/home" className={navbarStatus()}>Home</NavLink>
+                        <NavLink to="/" className={navbarStatus()}>Home</NavLink>
                         <NavLink to="/addNewFood" className={navbarStatus()}>Add Service</NavLink>
                         <NavLink to="/blog" className={navbarStatus()}>Blog</NavLink>
                     </Nav>
