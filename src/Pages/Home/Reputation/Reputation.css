@@ -1,0 +1,27 @@
+.reputation-bg {
+    background-image: url('./../../../assets/Banner/reputation-bg.jpg');
+    width: 100%;
+    min-height: 300px;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.reputation-bg::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.text-color {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.reputation-title {
+    font-size: 60px;
+}

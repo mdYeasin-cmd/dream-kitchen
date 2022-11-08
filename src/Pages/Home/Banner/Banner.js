@@ -11,7 +11,7 @@ const Banner = () => {
                     Cooking demands attention, patience, and above all, a respect for the gifts of the earth. It is a form of worship, a way of giving thanks.
                 </p>
                 <div>
-                    <button className="btn btn-primary fw-semibold mt-3">Purchase Now</button>
+                    <button className="btn-purchase fw-semibold mt-3">Purchase Now</button>
                 </div>
             </div>
         </div>
