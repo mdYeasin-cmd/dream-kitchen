@@ -4,35 +4,10 @@ import { AuthContext } from '../../../contexts/AuthProvider';
 import Button from 'react-bootstrap/Button';
 import { NavLink, useLocation } from 'react-router-dom';
 
-const WriteReview = ({ id }) => {
-
-
+const WriteReview = ({ handleReview }) => {
 
     const { user } = useContext(AuthContext);
     const location = useLocation();
-
-    const handleReview = (event) => {
-        event.preventDefault();
-        const reviewText = event.target.reviewText.value;
-        console.log(reviewText);
-
-        const reviewerInfo = {
-            email: user.email,
-            serviceId: id,
-            reviewText: reviewText
-        }
-
-        fetch('http://localhost:5000/review', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(reviewerInfo)
-        })
-            .then(res => res.json())
-            .then(data => console.log(data))
-            .catch(error => console.error(error));
-    }
 
     return (
         <div>

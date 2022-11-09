@@ -1,13 +1,57 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthProvider';
 import PeopleReviews from '../PeopleReviews/PeopleReviews';
 import WriteReview from '../WriteReview/WriteReview';
 import './FoodDetails.css';
 
 const FoodDetails = () => {
 
+    const {user} = useContext(AuthContext);
     const food = useLoaderData();
     const { _id, foodName, description, photoUrl, price, deliveryTime } = food;
+
+    const [reviews, setReviews] = useState([]);
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/reviews/${_id}`)
+            .then(res => res.json())
+            .then(data => setReviews(data))
+            .catch(error => console.error(error));
+    }, [_id])
+
+    const handleReview = (event) => {
+        event.preventDefault();
+        const reviewText = event.target.reviewText.value;
+        console.log(reviewText);
+
+        const reviewerInfo = {
+            email: user.email,
+            name: user.displayName,
+            image: user.photoURL,
+            serviceId: _id,
+            reviewText: reviewText
+        }
+
+        fetch('http://localhost:5000/review', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(reviewerInfo)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if(data.acknowledged) {
+                    const newReviews = [reviewerInfo, ...reviews];
+                    setReviews(newReviews);
+                }
+            })
+            .catch(error => console.error(error));
+    }
+
+    
 
     return (
         <div>
@@ -24,8 +68,8 @@ const FoodDetails = () => {
                     {description}
                 </p>
             </div>
-            <WriteReview id={_id}></WriteReview>
-            <PeopleReviews></PeopleReviews>
+            <WriteReview id={_id} handleReview={handleReview}></WriteReview>
+            <PeopleReviews id={_id} reviews={reviews}></PeopleReviews>
         </div>
     );
 };
