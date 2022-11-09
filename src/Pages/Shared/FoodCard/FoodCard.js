@@ -3,15 +3,22 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import './FoodCard.css';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+
 
 const FoodCard = ({ food }) => {
 
-    const {foodName, photoUrl, price, description} = food;
+    const { foodName, photoUrl, price, description } = food;
     console.log(food);
     return (
         <Col>
             <Card className="food-card shadow pb-3">
-                <Card.Img className="card-image p-3" variant="top" src={photoUrl} />
+
+                <PhotoProvider>
+                    <PhotoView src={photoUrl}>
+                        <img className="card-image p-3" src={photoUrl} alt="" />
+                    </PhotoView>
+                </PhotoProvider>
                 <Card.Body>
                     <Card.Title>{foodName}</Card.Title>
                     <Card.Text>
@@ -20,8 +27,8 @@ const FoodCard = ({ food }) => {
                     <Card.Text>
                         {
                             description.length > 100 ?
-                            description.slice(0, 100) + '...' :
-                            description
+                                description.slice(0, 100) + '...' :
+                                description
                         }
                     </Card.Text>
                     <Button className="w-100 fw-semibold" variant="primary">Show Details</Button>
