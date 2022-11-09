@@ -1,5 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import PeopleReviews from '../PeopleReviews/PeopleReviews';
+import WriteReview from '../WriteReview/WriteReview';
 import './FoodDetails.css';
 
 const FoodDetails = () => {
@@ -22,6 +24,8 @@ const FoodDetails = () => {
                     {description}
                 </p>
             </div>
+            <WriteReview></WriteReview>
+            <PeopleReviews></PeopleReviews>
         </div>
     );
 };
