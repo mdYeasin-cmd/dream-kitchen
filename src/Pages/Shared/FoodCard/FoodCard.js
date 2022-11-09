@@ -4,11 +4,12 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import './FoodCard.css';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
+import { Link } from 'react-router-dom';
 
 
 const FoodCard = ({ food }) => {
 
-    const { foodName, photoUrl, price, description } = food;
+    const { _id, foodName, photoUrl, price, description } = food;
     console.log(food);
     return (
         <Col>
@@ -31,7 +32,9 @@ const FoodCard = ({ food }) => {
                                 description
                         }
                     </Card.Text>
-                    <Button className="w-100 fw-semibold" variant="primary">Show Details</Button>
+                    <Link to={`/services/${_id}`}>
+                        <Button className="w-100 fw-semibold" variant="primary">Show Details</Button>
+                    </Link>
                 </Card.Body>
 
             </Card>
