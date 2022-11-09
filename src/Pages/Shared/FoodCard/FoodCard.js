@@ -24,7 +24,7 @@ const FoodCard = ({ food }) => {
                             description
                         }
                     </Card.Text>
-                    <Button className="w-100 fw-semibold" variant="primary">Go somewhere</Button>
+                    <Button className="w-100 fw-semibold" variant="primary">Show Details</Button>
                 </Card.Body>
 
             </Card>

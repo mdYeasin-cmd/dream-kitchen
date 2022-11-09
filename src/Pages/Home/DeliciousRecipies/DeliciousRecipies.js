@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import FoodCard from '../../Shared/FoodCard/FoodCard';
 import Button from 'react-bootstrap/Button';
 import './DeliciousRecipies.css'
+import { Link } from 'react-router-dom';
 
 const DeliciousRecipies = () => {
 
@@ -38,7 +39,9 @@ const DeliciousRecipies = () => {
                 </Row>
             </div>
             <div className="text-center mt-5">
-                <Button className="btn-see-all fw-semibold py-2 fs-5" variant="primary">See All</Button>
+                <Link to="/services">
+                    <Button className="btn-see-all fw-semibold py-2 fs-5" variant="primary">See All</Button>
+                </Link>
             </div>
         </div>
     );

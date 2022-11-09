@@ -11,8 +11,8 @@ const Header = () => {
     const navbarStatus = () => {
         return ({ isActive }) =>
             isActive ?
-                'nav-link active-nav fw-semibold rounded' :
-                'nav-link fw-semibold';
+                'nav-link mx-2 active-nav fw-semibold rounded' :
+                'nav-link mx-2 fw-semibold';
     }
 
     return (
@@ -26,6 +26,7 @@ const Header = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                         <NavLink to="/" className={navbarStatus()}>Home</NavLink>
+                        <NavLink to="/services" className={navbarStatus()}>All Foods</NavLink>
                         <NavLink to="/addNewFood" className={navbarStatus()}>Add Service</NavLink>
                         <NavLink to="/blog" className={navbarStatus()}>Blog</NavLink>
                     </Nav>
