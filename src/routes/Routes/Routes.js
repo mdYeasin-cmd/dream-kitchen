@@ -5,6 +5,8 @@ import AllFoods from "../../Pages/AllFoods/AllFoods/AllFoods";
 import FoodDetails from "../../Pages/AllFoods/FoodDetails/FoodDetails";
 import Blog from "../../Pages/Blog/Blog";
 import Home from "../../Pages/Home/Home/Home";
+import LogIn from "../../Pages/ManageUsers/LogIn/LogIn";
+import Registration from "../../Pages/ManageUsers/Registration/Registration";
 import ErrorPage from "../../Pages/Shared/ErrorPage/ErrorPage";
 
 export const routes = createBrowserRouter([
@@ -33,6 +35,14 @@ export const routes = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog></Blog>
+            },
+            {
+                path: '/login',
+                element: <LogIn></LogIn>
+            },
+            {
+                path: '/registration',
+                element: <Registration></Registration>
             },
             {
                 path: '*',

@@ -1,0 +1,29 @@
+.or-line {
+    position: relative;
+}
+
+.or-line::after {
+    content: '';
+    width: 400%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 11.5px;
+    left: 28px;
+}
+
+.or-line::before {
+    content: '';
+    width: 400%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 11.5px;
+    left: -94px;
+}
+
+.social-login-btn {
+    border: none;
+    font-size: 22px;
+    border-radius: 2px;
+}
