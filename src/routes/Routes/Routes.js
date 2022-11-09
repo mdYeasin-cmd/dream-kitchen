@@ -23,7 +23,8 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/services/:id',
-                element: <FoodDetails></FoodDetails>
+                element: <FoodDetails></FoodDetails>,
+                loader: ({ params }) => fetch(`http://localhost:5000/foods/${params.id}`)
             },
             {
                 path: '/addNewFood',
