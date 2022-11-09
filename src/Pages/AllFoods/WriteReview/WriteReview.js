@@ -2,9 +2,11 @@ import React, { useContext } from 'react';
 import Form from 'react-bootstrap/Form';
 import { AuthContext } from '../../../contexts/AuthProvider';
 import Button from 'react-bootstrap/Button';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
-const WriteReview = () => {
+const WriteReview = ({ id }) => {
+
+
 
     const { user } = useContext(AuthContext);
     const location = useLocation();
@@ -13,6 +15,23 @@ const WriteReview = () => {
         event.preventDefault();
         const reviewText = event.target.reviewText.value;
         console.log(reviewText);
+
+        const reviewerInfo = {
+            email: user.email,
+            serviceId: id,
+            reviewText: reviewText
+        }
+
+        fetch('http://localhost:5000/review', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(reviewerInfo)
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .catch(error => console.error(error));
     }
 
     return (

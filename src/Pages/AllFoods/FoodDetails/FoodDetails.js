@@ -7,7 +7,7 @@ import './FoodDetails.css';
 const FoodDetails = () => {
 
     const food = useLoaderData();
-    const { foodName, description, photoUrl, price, deliveryTime } = food;
+    const { _id, foodName, description, photoUrl, price, deliveryTime } = food;
 
     return (
         <div>
@@ -24,7 +24,7 @@ const FoodDetails = () => {
                     {description}
                 </p>
             </div>
-            <WriteReview></WriteReview>
+            <WriteReview id={_id}></WriteReview>
             <PeopleReviews></PeopleReviews>
         </div>
     );

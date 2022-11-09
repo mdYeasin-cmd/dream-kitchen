@@ -9,8 +9,6 @@ const DeliciousRecipies = () => {
 
     const [foods, setFoods] = useState([]);
 
-    console.log(foods);
-
     useEffect(() => {
         fetch('http://localhost:5000/foods')
             .then(res => res.json())

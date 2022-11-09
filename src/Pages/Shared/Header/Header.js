@@ -12,8 +12,6 @@ const Header = () => {
 
     const { user, logOut } = useContext(AuthContext);
 
-    console.log(user);
-
     const navbarStatus = () => {
         return ({ isActive }) =>
             isActive ?

@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 const FoodCard = ({ food }) => {
 
     const { _id, foodName, photoUrl, price, description } = food;
-    console.log(food);
+    
     return (
         <Col>
             <Card className="food-card shadow pb-3">
