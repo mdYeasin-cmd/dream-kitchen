@@ -12,6 +12,9 @@ const LogIn = () => {
     const { logIn, providerLogIn } = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider();
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+    console.log(from);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -22,7 +25,7 @@ const LogIn = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                navigate('/');
+                navigate(from, { replace: true });
             })
             .catch(error => console.error(error));
 
@@ -30,12 +33,12 @@ const LogIn = () => {
 
     const handleSignInWithGoogle = () => {
         providerLogIn(googleProvider)
-        .then(result => {
-            const user = result.user;
-            console.log(user);
-            navigate('/');
-        })
-        .catch(error => console.error(error));
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                navigate(from, { replace: true });
+            })
+            .catch(error => console.error(error));
     }
 
     return (
