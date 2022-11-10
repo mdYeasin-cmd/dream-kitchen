@@ -9,7 +9,11 @@ const MyReviews = () => {
     const [allReviews, setAllReviews] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myReviews?email=${user?.email}`)
+        fetch(`http://localhost:5000/myReviews?email=${user?.email}`, {
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('dream-kitchen-token')}`
+            }
+        })
             .then(res => res.json())
             .then(data => setAllReviews(data))
             .catch(error => console.errorI(error));

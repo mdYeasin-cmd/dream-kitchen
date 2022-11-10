@@ -11,6 +11,7 @@ const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true)
 
     const createUser = (email, password) => {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
@@ -19,14 +20,18 @@ const AuthProvider = ({ children }) => {
     }
 
     const logIn = (email, password) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
 
     const providerLogIn = (provider) => {
+        setLoading(true);
         return signInWithPopup(auth, provider);
     }
 
     const logOut = () => {
+        setLoading(true);
+        localStorage.removeItem('dream-kitchen-token');
         return signOut(auth);
     }
 

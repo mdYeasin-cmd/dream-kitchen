@@ -6,35 +6,6 @@ import './AllReviewTable.css';
 
 const AllReviewTable = ({ allReviews, handleDelete }) => {
 
-
-    // const [allReviews, setAllReviews] = useState([]);
-    // const [displayReviews, setDisplayReviews] = useState(allReviews);
-    // console.log(displayReviews)
-
-    // console.log(allReviews)
-    // console.log(displayReviews)
-
-    // useEffect(() => {
-    //     fetch(`http://localhost:5000/myReviews?email=${user?.email}`)
-    //         .then(res => res.json()) 
-    //         .then(data => setAllReviews(data))
-    //         .catch(error => console.errorI(error));
-    // }, [user?.email])
-
-    // const handleDelete = id => {
-    //     fetch(`http://localhost:5000/reviews/${id}`, {
-    //         method: 'DELETE'
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //            console.log(data);
-
-    //         })
-    //         .catch(error => console.error(error));
-    // }
-
-
-
     return (
         <div className="my-4">
             <div className="container">

@@ -1,13 +1,16 @@
 import React, { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
+import { AuthToken } from '../../../utilities/AuthToken';
+import Loading from '../../Shared/Loading/Loading';
 import './Registration.css';
 
 const Registration = () => {
 
-    const { createUser, profileUpdate } = useContext(AuthContext)
+    const { createUser, profileUpdate, loading } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleRegistration = (event) => {
         event.preventDefault();
@@ -16,13 +19,17 @@ const Registration = () => {
         const photoURL = form.photoURL.value;
         const email = form.email.value;
         const password = form.password.value;
-        // console.log(name, photoURL, email, password);
 
         createUser(email, password)
             .then(result => {
+                if(loading) {
+                    return <Loading></Loading>
+                }
                 const user = result.user;
+                AuthToken(user);
+                console.log(user);
                 profile(name, photoURL)
-                console.log(user)
+                navigate('/');
             })
             .catch(error => console.error(error));
 
