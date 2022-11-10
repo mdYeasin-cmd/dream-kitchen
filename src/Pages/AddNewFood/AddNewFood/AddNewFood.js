@@ -1,5 +1,6 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
+import toast from 'react-hot-toast';
 
 const AddNewFood = () => {
 
@@ -18,7 +19,7 @@ const AddNewFood = () => {
             photoUrl,
             deliveryTime,
             price,
-            description  
+            description
         }
 
         console.log(newFoodItem);
@@ -31,7 +32,12 @@ const AddNewFood = () => {
             body: JSON.stringify(newFoodItem)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                console.log(data);
+                if (data.acknowledged) {
+                    toast.success('A new food is successfully added');
+                }
+            })
             .catch(error => console.error(error));
 
     }
@@ -49,7 +55,7 @@ const AddNewFood = () => {
                     <Form.Label>Food Photo URL</Form.Label>
                     <Form.Control type="text" placeholder="Food Photo URL" name="foodPhotoURL" />
                 </Form.Group>
-                
+
                 <Form.Group className="mb-3">
                     <Form.Label>Food Delivery Time</Form.Label>
                     <Form.Control type="text" placeholder="Food Delivery Time" name="foodDeliveryTime" />
@@ -65,7 +71,7 @@ const AddNewFood = () => {
                     <Form.Control as="textarea" rows={6} placeholder="Food Description" name="foodDescription" />
                 </Form.Group>
 
-                <Form.Group className="mb-3 mx-auto">
+                <Form.Group className="mb-3 d-flex justify-content-center">
                     <Form.Control className="btn btn-primary w-25" type="submit" value="Add Food" />
                 </Form.Group>
 
