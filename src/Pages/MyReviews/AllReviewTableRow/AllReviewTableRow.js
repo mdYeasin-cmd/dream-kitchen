@@ -5,17 +5,6 @@ const AllReviewTableRow = ({ review, handleDelete, index }) => {
 
     const { _id, reviewText, serviceName } = review;
 
-    console.log(_id);
-
-    // const handleDelete = id => {
-    //     fetch(`http://localhost:5000/reviews/${id}`, {
-    //         method: 'DELETE'
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => console.log(data))
-    //         .catch(error => console.error(error));
-    // }
-
     return (
         <div className="row">
             <div className="col-1 d-flex align-items-center justify-content-center border border-primary">

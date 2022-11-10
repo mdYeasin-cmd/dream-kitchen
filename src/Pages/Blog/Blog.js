@@ -32,7 +32,6 @@ const Blog = () => {
                 </span>
             </h3>
 
-
             {/* Question - 2 */}
             <h2 className="fs-4 bg-primary text-white px-4 py-2 rounded">What is JWT, and how does it work?</h2>
             <h3 className="ms-4 mb-3 fs-4">

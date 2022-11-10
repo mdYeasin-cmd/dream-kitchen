@@ -1,6 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
-import Table from 'react-bootstrap/Table';
-import { AuthContext } from '../../../contexts/AuthProvider';
+import React from 'react';
 import AllReviewTableRow from '../AllReviewTableRow/AllReviewTableRow';
 import './AllReviewTable.css';
 

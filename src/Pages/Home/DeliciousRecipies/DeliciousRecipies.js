@@ -18,8 +18,6 @@ const DeliciousRecipies = () => {
             });
     }, []);
 
-
-
     return (
         <div className="py-5">
             <h2 className="text-center fs-1">Delicious Recipies</h2>

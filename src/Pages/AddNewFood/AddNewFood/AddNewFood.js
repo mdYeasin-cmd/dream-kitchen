@@ -15,7 +15,6 @@ const AddNewFood = () => {
         const deliveryTime = form.foodDeliveryTime.value;
         const price = form.foodPrice.value;
         const description = form.foodDescription.value;
-        // console.log(name, photoUrl, deliveryTime, price, description);
 
         const newFoodItem = {
             foodName: name,
@@ -24,8 +23,6 @@ const AddNewFood = () => {
             price,
             description
         }
-
-        console.log(newFoodItem);
 
         fetch('http://localhost:5000/addNewFood', {
             method: 'POST',
@@ -36,7 +33,6 @@ const AddNewFood = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 if (data.acknowledged) {
                     toast.success('A new food is successfully added');
                 }

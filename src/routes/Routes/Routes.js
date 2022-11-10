@@ -32,6 +32,10 @@ export const routes = createBrowserRouter([
                 loader: ({ params }) => fetch(`http://localhost:5000/foods/${params.id}`)
             },
             {
+                path: '/blog',
+                element: <Blog></Blog>
+            },
+            {
                 path: '/reviewUpdate/:id',
                 element: <PrivateRoute><ReviewUpdate></ReviewUpdate></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/singleReview/${params.id}`)
@@ -42,11 +46,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/addNewFood',
-                element: <AddNewFood></AddNewFood>
-            },
-            {
-                path: '/blog',
-                element: <Blog></Blog>
+                element: <PrivateRoute><AddNewFood></AddNewFood></PrivateRoute>
             },
             {
                 path: '/login',

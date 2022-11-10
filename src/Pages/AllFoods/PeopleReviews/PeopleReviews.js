@@ -2,9 +2,7 @@ import React, { useEffect, useState } from 'react';
 import SingleReview from '../SingleReview/SingleReview';
 
 const PeopleReviews = ({ reviews }) => {
-
     
-
     return (
         <div>
             <div className="container mb-5">

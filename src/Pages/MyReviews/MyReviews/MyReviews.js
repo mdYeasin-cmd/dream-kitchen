@@ -7,8 +7,9 @@ import AllReviewTable from '../AllReviewTable/AllReviewTable';
 const MyReviews = () => {
 
     useTitle('My Reviews - Dream Kitchen')
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
     const [allReviews, setAllReviews] = useState([]);
+    const token = localStorage.getItem('dream-kitchen-token');
 
     useEffect(() => {
         fetch(`http://localhost:5000/myReviews?email=${user?.email}`, {
@@ -17,9 +18,14 @@ const MyReviews = () => {
             }
         })
             .then(res => res.json())
-            .then(data => setAllReviews(data))
+            .then(data => {
+                if(!token){
+                    logOut();
+                }
+                setAllReviews(data)
+            })
             .catch(error => console.errorI(error));
-    }, [user?.email]);
+    }, [user?.email, token, logOut]);
 
     const handleDelete = id => {
         fetch(`http://localhost:5000/reviews/${id}`, {

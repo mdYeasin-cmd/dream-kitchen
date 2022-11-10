@@ -4,7 +4,6 @@ import Row from 'react-bootstrap/Row';
 import FoodCard from '../../Shared/FoodCard/FoodCard';
 import './AllFoods.css';
 import { AuthContext } from '../../../contexts/AuthProvider';
-import { LoaderIcon } from 'react-hot-toast';
 import Loading from '../../Shared/Loading/Loading';
 import useTitle from '../../../hooks/useTitle';
 

@@ -1,11 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './SingleReview.css';
 
 const SingleReview = ({ review }) => {
-
     
-    const { email, name, image, reviewText } = review;
-    console.log(image)
+    const { name, image, reviewText } = review;
 
     return (
         <div className="shadow-sm p-3">

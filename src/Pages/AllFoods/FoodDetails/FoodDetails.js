@@ -10,7 +10,6 @@ const FoodDetails = () => {
     const {user} = useContext(AuthContext);
     const food = useLoaderData();
     const { _id, foodName, description, photoUrl, price, deliveryTime } = food;
-
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {

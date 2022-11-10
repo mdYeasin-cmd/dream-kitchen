@@ -18,7 +18,6 @@ const LogIn = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
-    console.log(from);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -47,7 +46,6 @@ const LogIn = () => {
                 }
                 const user = result.user;
                 AuthToken(user);
-                console.log(user);
                 navigate(from, { replace: true });
             })
             .catch(error => console.error(error));
