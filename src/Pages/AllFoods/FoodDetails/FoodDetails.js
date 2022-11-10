@@ -30,6 +30,7 @@ const FoodDetails = () => {
             name: user.displayName,
             image: user.photoURL,
             serviceId: _id,
+            serviceName: foodName,
             reviewText: reviewText
         }
 
