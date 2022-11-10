@@ -5,12 +5,14 @@ import Form from 'react-bootstrap/Form';
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
+import useTitle from '../../../hooks/useTitle';
 import { AuthToken } from '../../../utilities/AuthToken';
 import Loading from '../../Shared/Loading/Loading';
 import './LogIn.css';
 
 const LogIn = () => {
 
+    useTitle('Log In - Dream Kitchen')
     const { logIn, providerLogIn, loading } = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider();
     const navigate = useNavigate();

@@ -1,8 +1,11 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 import toast from 'react-hot-toast';
+import useTitle from '../../../hooks/useTitle';
 
 const AddNewFood = () => {
+
+    useTitle('Add Service - Dream Kitchen')
 
     const handleSubmit = event => {
         event.preventDefault();

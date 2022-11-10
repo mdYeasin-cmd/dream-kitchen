@@ -3,12 +3,14 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
+import useTitle from '../../../hooks/useTitle';
 import { AuthToken } from '../../../utilities/AuthToken';
 import Loading from '../../Shared/Loading/Loading';
 import './Registration.css';
 
 const Registration = () => {
 
+    useTitle('Registration - Dream Kitchen')
     const { createUser, profileUpdate, loading } = useContext(AuthContext);
     const navigate = useNavigate();
 

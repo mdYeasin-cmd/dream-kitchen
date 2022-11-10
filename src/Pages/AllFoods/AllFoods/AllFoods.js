@@ -6,9 +6,11 @@ import './AllFoods.css';
 import { AuthContext } from '../../../contexts/AuthProvider';
 import { LoaderIcon } from 'react-hot-toast';
 import Loading from '../../Shared/Loading/Loading';
+import useTitle from '../../../hooks/useTitle';
 
 const AllFoods = () => {
 
+    useTitle('All Foods - Dream Kitchen');
     const { loading } = useContext(AuthContext);
     const { allFoods } = useLoaderData();
 

@@ -1,6 +1,10 @@
 import React from 'react';
+import useTitle from '../../hooks/useTitle';
 
 const Blog = () => {
+
+    useTitle('Blog - Dream Kitchen')
+
     return (
         <div className="container my-5">
             {/* Question - 1 */}
