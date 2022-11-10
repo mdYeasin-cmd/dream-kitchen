@@ -5,23 +5,24 @@ import Form from 'react-bootstrap/Form';
 const ReviewUpdate = () => {
 
     const review = useLoaderData();
-    console.log(review)
 
     const handleReviewUpdate = event => {
         event.preventDefault();
-        // const updatedReview = event.target.reviewText.value;
-        // console.log(updatedReview);
+        const updatedReview = event.target.reviewText.value;
+        console.log(updatedReview);
+        // review.reviewText = updatedReview;
+        console.log(updatedReview);
 
-        // fetch(`http://localhost:5000/reviews/${review._id}`, {
-        //     method: 'PATCH',
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify(updatedReview)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => console.log(data))
-        //     .cathch(error => console.error(error));
+        fetch(`http://localhost:5000/singleReview/${review._id}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ reviewText: updatedReview })
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .catch(error => console.error(error));
 
     }
 
