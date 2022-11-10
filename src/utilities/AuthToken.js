@@ -3,7 +3,7 @@ export const AuthToken = async (user) => {
         email: user.email
     }
 
-    fetch('http://localhost:5000/jwt', {
+    fetch('https://dream-kitchen-server.vercel.app/jwt', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

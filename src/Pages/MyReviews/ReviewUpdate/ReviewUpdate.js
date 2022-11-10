@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 const ReviewUpdate = () => {
 
     const review = useLoaderData();
+    console.log(review)
 
     const handleReviewUpdate = event => {
         event.preventDefault();
@@ -13,7 +14,7 @@ const ReviewUpdate = () => {
         // review.reviewText = updatedReview;
         console.log(updatedReview);
 
-        fetch(`http://localhost:5000/singleReview/${review._id}`, {
+        fetch(`https://dream-kitchen-server.vercel.app/singleReview/${review._id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
@@ -29,7 +30,7 @@ const ReviewUpdate = () => {
     return (
         <div>
             <div className="container">
-                <h2>This is review update page</h2>
+                <h2>Update your comment for {review.serviceName}</h2>
                 <Form onSubmit={handleReviewUpdate}>
 
                     <Form.Group className="mb-3">

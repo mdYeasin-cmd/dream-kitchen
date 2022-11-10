@@ -24,7 +24,7 @@ const AddNewFood = () => {
             description
         }
 
-        fetch('http://localhost:5000/addNewFood', {
+        fetch('https://dream-kitchen-server.vercel.app/addNewFood', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

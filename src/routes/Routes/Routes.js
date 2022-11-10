@@ -24,12 +24,12 @@ export const routes = createBrowserRouter([
             {
                 path: '/services',
                 element: <AllFoods></AllFoods>,
-                loader: () => fetch('http://localhost:5000/foods')
+                loader: () => fetch('https://dream-kitchen-server.vercel.app/foods')
             },
             {
                 path: '/services/:id',
                 element: <FoodDetails></FoodDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/foods/${params.id}`)
+                loader: ({ params }) => fetch(`https://dream-kitchen-server.vercel.app/foods/${params.id}`)
             },
             {
                 path: '/blog',
@@ -38,7 +38,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/reviewUpdate/:id',
                 element: <PrivateRoute><ReviewUpdate></ReviewUpdate></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/singleReview/${params.id}`)
+                loader: ({params}) => fetch(`https://dream-kitchen-server.vercel.app/singleReview/${params.id}`)
             },
             {
                 path: '/myReviews',

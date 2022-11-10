@@ -10,7 +10,7 @@ const DeliciousRecipies = () => {
     const [foods, setFoods] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/foods')
+        fetch('https://dream-kitchen-server.vercel.app/foods')
             .then(res => res.json())
             .then(data => {
                 const { firstThreeFoods } = data;

@@ -13,7 +13,7 @@ const FoodDetails = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews/${_id}`)
+        fetch(`https://dream-kitchen-server.vercel.app/reviews/${_id}`)
             .then(res => res.json())
             .then(data => setReviews(data))
             .catch(error => console.error(error));
@@ -33,7 +33,7 @@ const FoodDetails = () => {
             reviewText: reviewText
         }
 
-        fetch('http://localhost:5000/review', {
+        fetch('https://dream-kitchen-server.vercel.app/review', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
