@@ -5,6 +5,7 @@ import DeliciousRecipies from '../DeliciousRecipies/DeliciousRecipies';
 import FoodBlog from '../FoodBlog/FoodBlog';
 import Newsletter from '../Newsletter/Newsletter';
 import Reputation from '../Reputation/Reputation';
+import SeasonalHighlights from '../SeasonalHighlights/SeasonalHighlights';
 
 const Home = () => {
 
@@ -14,6 +15,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <DeliciousRecipies></DeliciousRecipies>
+            <SeasonalHighlights></SeasonalHighlights>
             <Reputation></Reputation>
             <FoodBlog></FoodBlog>
             <Newsletter></Newsletter>
