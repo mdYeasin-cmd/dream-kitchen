@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
 import useTitle from '../../../hooks/useTitle';
 import { AuthToken } from '../../../utilities/AuthToken';
 import Loading from '../../Shared/Loading/Loading';
+import ReusableButton from '../../Shared/ReusableButton/ReusableButton';
 import './Registration.css';
 
 const Registration = () => {
@@ -82,9 +82,9 @@ const Registration = () => {
                     </Form.Group>
 
                     <div className="auth-actions d-flex justify-content-center">
-                        <Button className="fw-semibold auth-submit" variant="primary" type="submit">
+                        <ReusableButton className="btn btn-primary fw-semibold auth-submit" type="submit">
                             Registration
-                        </Button>
+                        </ReusableButton>
                     </div>
                 </Form>
 

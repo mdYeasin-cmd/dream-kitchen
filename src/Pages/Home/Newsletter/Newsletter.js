@@ -1,15 +1,16 @@
 import React from 'react';
 import './Newsletter.css';
+import ReusableButton from '../../Shared/ReusableButton/ReusableButton';
 
 const Newsletter = () => {
     return (
-        <section className="newsletter-section py-5">
+        <section className="newsletter-section">
             <div className="container">
                 <div className="newsletter-card shadow p-4 p-md-5 rounded">
                     <div className="row align-items-center gy-4">
                         <div className="col-lg-7">
-                            <h2 className="fs-1">Newsletter</h2>
-                            <p className="text-muted mb-0">
+                            <h2 className="section-title mb-3">Newsletter</h2>
+                            <p className="section-lede mb-0">
                                 Get fresh recipes, cooking tips, and seasonal favorites delivered straight to your inbox every week.
                             </p>
                         </div>
@@ -21,9 +22,9 @@ const Newsletter = () => {
                                     placeholder="Enter your email"
                                     aria-label="Email address"
                                 />
-                                <button type="button" className="btn btn-primary fw-semibold">
+                                <ReusableButton type="button" className="btn btn-primary fw-semibold">
                                     Subscribe
-                                </button>
+                                </ReusableButton>
                             </form>
                             <small className="text-muted d-block mt-2">No spam, just tasty updates.</small>
                         </div>

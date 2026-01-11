@@ -1,6 +1,6 @@
 .active-nav {
-    color: #0D6EFD !important;
-    border-bottom: 2px solid #0D6EFD;
+    color: var(--dk-accent) !important;
+    border-bottom: 2px solid var(--dk-accent);
 }
 
 .logo-img {

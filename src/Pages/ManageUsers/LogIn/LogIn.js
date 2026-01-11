@@ -1,6 +1,5 @@
 import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext } from 'react';
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -8,6 +7,7 @@ import { AuthContext } from '../../../contexts/AuthProvider';
 import useTitle from '../../../hooks/useTitle';
 import { AuthToken } from '../../../utilities/AuthToken';
 import Loading from '../../Shared/Loading/Loading';
+import ReusableButton from '../../Shared/ReusableButton/ReusableButton';
 import './LogIn.css';
 
 const LogIn = () => {
@@ -73,9 +73,9 @@ const LogIn = () => {
                     </Form.Group>
 
                     <div className="auth-actions text-center">
-                        <Button className="fw-semibold auth-submit" variant="primary" type="submit">
+                        <ReusableButton className="btn btn-primary fw-semibold auth-submit" type="submit">
                             Log In
-                        </Button>
+                        </ReusableButton>
                     </div>
                 </Form>
 
@@ -84,9 +84,13 @@ const LogIn = () => {
                 </div>
 
                 <div className="text-center mt-3">
-                    <button onClick={handleSignInWithGoogle} className="social-login-btn">
+                    <ReusableButton
+                        onClick={handleSignInWithGoogle}
+                        className="social-login-btn"
+                        type="button"
+                    >
                         <FcGoogle></FcGoogle>
-                    </button>
+                    </ReusableButton>
                 </div>
 
                 <div>

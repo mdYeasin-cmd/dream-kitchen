@@ -1,5 +1,6 @@
 .seasonal-highlights {
-    background: #fff5f0;
+    background: linear-gradient(135deg, rgba(255, 239, 228, 0.8), rgba(255, 250, 244, 0.95));
+    padding: 4.5rem 0;
 }
 
 .seasonal-description {
@@ -8,14 +9,15 @@
 }
 
 .seasonal-card {
-    background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
     color: #2f2f2f;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .seasonal-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 22px 44px rgba(0, 0, 0, 0.14);
 }

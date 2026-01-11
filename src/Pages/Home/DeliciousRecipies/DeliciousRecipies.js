@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import FoodCard from '../../Shared/FoodCard/FoodCard';
-import Button from 'react-bootstrap/Button';
 import './DeliciousRecipies.css'
 import { Link } from 'react-router-dom';
+import ReusableButton from '../../Shared/ReusableButton/ReusableButton';
 
 const DeliciousRecipies = () => {
 
@@ -19,9 +19,9 @@ const DeliciousRecipies = () => {
     }, []);
 
     return (
-        <div className="py-5">
-            <h2 className="text-center fs-1">Delicious Recipies</h2>
-            <p className="text-center w-50 mx-auto mb-5">
+        <div className="delicious-section">
+            <h2 className="section-title text-center">Delicious Recipies</h2>
+            <p className="section-lede text-center mb-5">
                 All recipies are handmaded and Popular in my website as clinet review. This all recipies are special for me as a cooking enthusiast.
             </p>
             <div className="container">
@@ -36,7 +36,9 @@ const DeliciousRecipies = () => {
             </div>
             <div className="text-center mt-5">
                 <Link to="/services">
-                    <Button className="btn-see-all fw-semibold py-2 fs-5" variant="primary">See All</Button>
+                    <ReusableButton className="btn btn-primary btn-see-all fw-semibold py-2 fs-5">
+                        See All
+                    </ReusableButton>
                 </Link>
             </div>
         </div>

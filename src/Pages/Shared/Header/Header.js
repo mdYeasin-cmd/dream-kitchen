@@ -5,8 +5,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
 import logo from './../../../assets/Logo/logo.png';
-import Button from 'react-bootstrap/Button';
 import { AuthContext } from '../../../contexts/AuthProvider';
+import ReusableButton from '../ReusableButton/ReusableButton';
 
 const Header = () => {
 
@@ -43,14 +43,23 @@ const Header = () => {
                                 <>
                                     <NavLink to="/myReviews" className={navbarStatus()}>My Reviews</NavLink>
                                     <NavLink to="/addNewFood" className={navbarStatus()}>Add Service</NavLink>
-                                    <Button onClick={handleLogOut} className="ms-2 fw-semibold" variant="primary">Log Out</Button>
+                                    <ReusableButton
+                                        onClick={handleLogOut}
+                                        className="btn btn-primary ms-2 fw-semibold"
+                                    >
+                                        Log Out
+                                    </ReusableButton>
                                 </> :
                                 <>
                                     <NavLink to="/login" className="ms-2">
-                                        <Button className="w-100 fw-semibold" variant="primary">Log In</Button>
+                                        <ReusableButton className="btn btn-primary w-100 fw-semibold">
+                                            Log In
+                                        </ReusableButton>
                                     </NavLink>
                                     <NavLink to="/registration" className="ms-2">
-                                        <Button className="w-100 fw-semibold" variant="primary">Registration</Button>
+                                        <ReusableButton className="btn btn-primary w-100 fw-semibold">
+                                            Registration
+                                        </ReusableButton>
                                     </NavLink>
                                 </>
                         }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
+import ReusableButton from '../../Shared/ReusableButton/ReusableButton';
 
 const ReviewUpdate = () => {
 
@@ -38,7 +39,9 @@ const ReviewUpdate = () => {
                     </Form.Group>
 
                     <Form.Group className="mb-3 d-flex justify-content-center">
-                        <Form.Control className="btn btn-primary fw-semibold w-25" type="submit" value="Send" />
+                        <ReusableButton type="submit" className="btn btn-primary fw-semibold w-25">
+                            Send
+                        </ReusableButton>
                     </Form.Group>
 
                 </Form>

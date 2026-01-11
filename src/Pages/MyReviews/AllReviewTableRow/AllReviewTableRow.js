@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ReusableButton from '../../Shared/ReusableButton/ReusableButton';
 
 const AllReviewTableRow = ({ review, handleDelete, index }) => {
 
@@ -18,14 +19,17 @@ const AllReviewTableRow = ({ review, handleDelete, index }) => {
             </div>
             <div className="col-2 d-flex align-items-center border border-primary">
                 <Link to={`/reviewUpdate/${_id}`}>
-                    <button 
-                    className="btn btn-primary my-2 me-2">Update</button>
+                    <ReusableButton className="btn btn-primary my-2 me-2">
+                        Update
+                    </ReusableButton>
                 </Link>
 
-                <button
+                <ReusableButton
                     className="btn btn-primary my-2"
                     onClick={() => handleDelete(_id)}
-                >Delete</button>
+                >
+                    Delete
+                </ReusableButton>
             </div>
         </div>
     );

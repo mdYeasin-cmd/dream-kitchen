@@ -18,11 +18,11 @@ const highlights = [
 
 const SeasonalHighlights = () => {
     return (
-        <section className="seasonal-highlights py-5">
+        <section className="seasonal-highlights">
             <div className="container">
                 <div className="text-center mb-5">
-                    <h2 className="fs-1">Seasonal Kitchen Highlights</h2>
-                    <p className="mx-auto seasonal-description">
+                    <h2 className="section-title">Seasonal Kitchen Highlights</h2>
+                    <p className="section-lede seasonal-description">
                         Discover the ideas that inspire my kitchen every week, from thoughtful planning to
                         chef-tested techniques that keep meals fresh and flavorful.
                     </p>

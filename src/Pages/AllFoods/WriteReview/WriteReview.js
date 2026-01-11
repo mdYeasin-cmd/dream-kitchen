@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import Form from 'react-bootstrap/Form';
 import { AuthContext } from '../../../contexts/AuthProvider';
-import Button from 'react-bootstrap/Button';
 import { NavLink, useLocation } from 'react-router-dom';
+import ReusableButton from '../../Shared/ReusableButton/ReusableButton';
 
 const WriteReview = ({ handleReview }) => {
 
@@ -24,7 +24,9 @@ const WriteReview = ({ handleReview }) => {
                                 </Form.Group>
 
                                 <Form.Group className="mb-3 d-flex justify-content-center">
-                                    <Form.Control className="btn btn-primary fw-semibold w-25" type="submit" value="Send" />
+                                    <ReusableButton type="submit" className="btn btn-primary fw-semibold w-25">
+                                        Send
+                                    </ReusableButton>
                                 </Form.Group>
 
                             </Form>
@@ -33,7 +35,9 @@ const WriteReview = ({ handleReview }) => {
                             <div className="mb-4">
                                 <span className="fs-5 fw-semibold">Please Log In first to write a review.</span>
                                 <NavLink to="/login" state={{ from: location }} replace>
-                                    <Button className="ms-3 fw-semibold" variant="primary">Log In</Button>
+                                    <ReusableButton className="btn btn-primary ms-3 fw-semibold">
+                                        Log In
+                                    </ReusableButton>
                                 </NavLink>
                             </div>
                         </>

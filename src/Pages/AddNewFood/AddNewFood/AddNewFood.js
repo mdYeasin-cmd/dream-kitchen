@@ -2,6 +2,7 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import toast from 'react-hot-toast';
 import useTitle from '../../../hooks/useTitle';
+import ReusableButton from '../../Shared/ReusableButton/ReusableButton';
 
 const AddNewFood = () => {
 
@@ -71,7 +72,9 @@ const AddNewFood = () => {
                 </Form.Group>
 
                 <Form.Group className="mb-3 d-flex justify-content-center">
-                    <Form.Control className="btn btn-primary w-25" type="submit" value="Add Food" />
+                    <ReusableButton type="submit" className="btn btn-primary w-25">
+                        Add Food
+                    </ReusableButton>
                 </Form.Group>
 
             </Form>

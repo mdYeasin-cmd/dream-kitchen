@@ -1,0 +1,52 @@
+:root {
+  --dk-accent: #f36b4a;
+  --dk-accent-dark: #d9573f;
+  --dk-accent-light: #ff9169;
+  --dk-accent-rgb: 243, 107, 74;
+  --dk-ink: #241a14;
+  --dk-muted: #665a52;
+  --dk-paper: #fffdf8;
+  --dk-cream: #fff4ea;
+  --bs-primary: var(--dk-accent);
+  --bs-primary-rgb: var(--dk-accent-rgb);
+  --bs-link-color: var(--dk-accent);
+  --bs-link-hover-color: var(--dk-accent-dark);
+}
+
+.btn-primary {
+  background-color: var(--dk-accent);
+  border-color: var(--dk-accent);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--dk-accent-dark);
+  border-color: var(--dk-accent-dark);
+}
+
+.btn-primary:focus,
+.btn-primary:focus-visible {
+  box-shadow: 0 0 0 0.2rem rgba(var(--dk-accent-rgb), 0.35);
+}
+
+.btn-outline-primary {
+  color: var(--dk-accent);
+  border-color: var(--dk-accent);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--dk-accent);
+  border-color: var(--dk-accent);
+}
+
+.bg-primary {
+  background-color: var(--dk-accent) !important;
+}
+
+.text-primary {
+  color: var(--dk-accent) !important;
+}
+
+.border-primary {
+  border-color: var(--dk-accent) !important;
+}

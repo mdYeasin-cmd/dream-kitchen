@@ -1,10 +1,10 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
 import './FoodCard.css';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { Link } from 'react-router-dom';
+import ReusableButton from '../ReusableButton/ReusableButton';
 
 
 const FoodCard = ({ food }) => {
@@ -33,7 +33,9 @@ const FoodCard = ({ food }) => {
                         }
                     </Card.Text>
                     <Link to={`/services/${_id}`}>
-                        <Button className="w-100 fw-semibold" variant="primary">Show Details</Button>
+                        <ReusableButton className="btn btn-primary w-100 fw-semibold">
+                            Show Details
+                        </ReusableButton>
                     </Link>
                 </Card.Body>
 
