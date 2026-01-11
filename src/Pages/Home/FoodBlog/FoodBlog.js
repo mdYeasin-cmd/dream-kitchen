@@ -5,14 +5,17 @@ import { FaRegCalendarAlt, FaThumbsUp } from 'react-icons/fa';
 import { BsFillChatFill } from 'react-icons/bs';
 import './FoodBlog.css';
 import ReusableButton from '../../Shared/ReusableButton/ReusableButton';
+import SectionHeader from '../../Shared/SectionHeader/SectionHeader';
 
 const FoodBlog = () => {
     return (
         <div className="food-blog">
-            <h2 className="section-title text-center">Food Blog</h2>
-            <p className="section-lede text-center mb-5">
-                Here you can see all my interesting food blog. Where I Write about food nutrition and hygiene etc. And also talk about food test.
-            </p>
+            <SectionHeader
+                title="Food Blog"
+                lede="Here you can see all my interesting food blog. Where I Write about food nutrition and hygiene etc. And also talk about food test."
+                align="text-center"
+                ledeClassName="mb-5"
+            />
             <div className="container">
                 <div className="row row-cols-1 row-cols-md-2 gx-4 gy-4">
                     <div className="col">

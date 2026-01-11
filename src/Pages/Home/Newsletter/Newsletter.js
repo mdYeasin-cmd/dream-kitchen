@@ -1,6 +1,7 @@
 import React from 'react';
 import './Newsletter.css';
 import ReusableButton from '../../Shared/ReusableButton/ReusableButton';
+import SectionHeader from '../../Shared/SectionHeader/SectionHeader';
 
 const Newsletter = () => {
     return (
@@ -9,10 +10,12 @@ const Newsletter = () => {
                 <div className="newsletter-card shadow p-4 p-md-5 rounded">
                     <div className="row align-items-center gy-4">
                         <div className="col-lg-7">
-                            <h2 className="section-title mb-3">Newsletter</h2>
-                            <p className="section-lede mb-0">
-                                Get fresh recipes, cooking tips, and seasonal favorites delivered straight to your inbox every week.
-                            </p>
+                            <SectionHeader
+                                title="Newsletter"
+                                lede="Get fresh recipes, cooking tips, and seasonal favorites delivered straight to your inbox every week."
+                                titleClassName="mb-3"
+                                ledeClassName="mb-0"
+                            />
                         </div>
                         <div className="col-lg-5">
                             <form className="newsletter-form d-flex flex-column flex-sm-row gap-2">
