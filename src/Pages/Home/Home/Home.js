@@ -3,6 +3,7 @@ import useTitle from '../../../hooks/useTitle';
 import Banner from '../Banner/Banner';
 import DeliciousRecipies from '../DeliciousRecipies/DeliciousRecipies';
 import FoodBlog from '../FoodBlog/FoodBlog';
+import Newsletter from '../Newsletter/Newsletter';
 import Reputation from '../Reputation/Reputation';
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
             <DeliciousRecipies></DeliciousRecipies>
             <Reputation></Reputation>
             <FoodBlog></FoodBlog>
+            <Newsletter></Newsletter>
         </div>
     );
 };
