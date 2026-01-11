@@ -1,5 +1,6 @@
 import React from 'react';
 import './SeasonalHighlights.css';
+import SectionHeader from '../../Shared/SectionHeader/SectionHeader';
 
 const highlights = [
     {
@@ -20,13 +21,13 @@ const SeasonalHighlights = () => {
     return (
         <section className="seasonal-highlights">
             <div className="container">
-                <div className="text-center mb-5">
-                    <h2 className="section-title">Seasonal Kitchen Highlights</h2>
-                    <p className="section-lede seasonal-description">
-                        Discover the ideas that inspire my kitchen every week, from thoughtful planning to
-                        chef-tested techniques that keep meals fresh and flavorful.
-                    </p>
-                </div>
+                <SectionHeader
+                    title="Seasonal Kitchen Highlights"
+                    lede="Discover the ideas that inspire my kitchen every week, from thoughtful planning to chef-tested techniques that keep meals fresh and flavorful."
+                    align="text-center"
+                    className="mb-5"
+                    ledeClassName="seasonal-description"
+                />
                 <div className="row g-4">
                     {highlights.map((item) => (
                         <div className="col-12 col-md-4" key={item.title}>

@@ -4,6 +4,7 @@ import FoodCard from '../../Shared/FoodCard/FoodCard';
 import './DeliciousRecipies.css'
 import { Link } from 'react-router-dom';
 import ReusableButton from '../../Shared/ReusableButton/ReusableButton';
+import SectionHeader from '../../Shared/SectionHeader/SectionHeader';
 
 const DeliciousRecipies = () => {
 
@@ -20,10 +21,12 @@ const DeliciousRecipies = () => {
 
     return (
         <div className="delicious-section">
-            <h2 className="section-title text-center">Delicious Recipies</h2>
-            <p className="section-lede text-center mb-5">
-                All recipies are handmaded and Popular in my website as clinet review. This all recipies are special for me as a cooking enthusiast.
-            </p>
+            <SectionHeader
+                title="Delicious Recipies"
+                lede="All recipies are handmaded and Popular in my website as clinet review. This all recipies are special for me as a cooking enthusiast."
+                align="text-center"
+                ledeClassName="mb-5"
+            />
             <div className="container">
                 <Row xs={1} md={3} className="g-4">
                     {
