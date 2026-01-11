@@ -54,40 +54,45 @@ const Registration = () => {
 
     return (
         <div className="form-container shadow p-4 my-5 mx-auto rounded">
-            <h2 className="text-center mb-3 services-title w-50 mx-auto py-1 rounded">Registration</h2>
-            <Form onSubmit={handleRegistration}>
-
-                <Form.Group className="mb-3">
-                    <Form.Label>Your Name</Form.Label>
-                    <Form.Control type="text" name="name" placeholder="Your Name" />
-                </Form.Group>
-
-                <Form.Group className="mb-3">
-                    <Form.Label>Photo URL</Form.Label>
-                    <Form.Control type="text" name="photoURL" placeholder="Photo URL" />
-                </Form.Group>
-
-                <Form.Group className="mb-3">
-                    <Form.Label>Email Address</Form.Label>
-                    <Form.Control type="email" name="email" placeholder="Enter Email" />
-                </Form.Group>
-
-                <Form.Group className="mb-3">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" name="password" placeholder="Password" />
-                </Form.Group>
-
-                <div className="d-flex justify-content-center">
-                    <Button className="fw-semibold w-25" variant="primary" type="submit">
-                        Registration
-                    </Button>
+            <div className="auth-card">
+                <div className="auth-header text-center">
+                    <h2 className="services-title auth-title mx-auto py-1 rounded">Registration</h2>
+                    <p className="text-muted mb-0">Create your account to start cooking.</p>
                 </div>
-            </Form>
+                <Form className="auth-form" onSubmit={handleRegistration}>
 
-            <div>
-                <p className="text-center mt-3">
-                    <small>Already have an account? <Link className="text-decoration-none" to="/login">Log In</Link></small>
-                </p>
+                    <Form.Group className="mb-3">
+                        <Form.Label>Your Name</Form.Label>
+                        <Form.Control type="text" name="name" placeholder="Your Name" />
+                    </Form.Group>
+
+                    <Form.Group className="mb-3">
+                        <Form.Label>Photo URL</Form.Label>
+                        <Form.Control type="text" name="photoURL" placeholder="Photo URL" />
+                    </Form.Group>
+
+                    <Form.Group className="mb-3">
+                        <Form.Label>Email Address</Form.Label>
+                        <Form.Control type="email" name="email" placeholder="Enter Email" />
+                    </Form.Group>
+
+                    <Form.Group className="mb-3">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control type="password" name="password" placeholder="Password" />
+                    </Form.Group>
+
+                    <div className="auth-actions d-flex justify-content-center">
+                        <Button className="fw-semibold auth-submit" variant="primary" type="submit">
+                            Registration
+                        </Button>
+                    </div>
+                </Form>
+
+                <div>
+                    <p className="text-center mt-3">
+                        <small>Already have an account? <Link className="text-decoration-none" to="/login">Log In</Link></small>
+                    </p>
+                </div>
             </div>
 
         </div>
