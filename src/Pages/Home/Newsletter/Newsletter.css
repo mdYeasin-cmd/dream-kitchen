@@ -1,0 +1,17 @@
+.newsletter-section {
+  background-color: #f9fafc;
+}
+
+.newsletter-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.newsletter-input {
+  min-height: 48px;
+}
+
+.newsletter-form .btn {
+  min-height: 48px;
+  white-space: nowrap;
+}
