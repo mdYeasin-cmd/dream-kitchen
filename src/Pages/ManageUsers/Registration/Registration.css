@@ -1,3 +1,37 @@
 .form-container {
-    width: 40%;
+    width: min(520px, 92vw);
+    background: #ffffff;
+}
+
+.auth-card {
+    padding: 12px 4px 4px;
+}
+
+.auth-header h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.35rem;
+}
+
+.auth-form {
+    margin-top: 1.5rem;
+}
+
+.auth-form .form-control {
+    border-radius: 12px;
+    padding: 0.65rem 0.9rem;
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+.auth-form .form-label {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.auth-actions {
+    margin-top: 1.25rem;
+}
+
+.auth-submit {
+    padding: 0.55rem 2.5rem;
+    border-radius: 999px;
 }
