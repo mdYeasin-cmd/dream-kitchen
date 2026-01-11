@@ -56,7 +56,7 @@ const LogIn = () => {
 
             <div className="auth-card">
                 <div className="auth-header text-center">
-                    <h2 className="services-title mx-auto py-1 rounded">Log In</h2>
+                    <h2 className="services-title auth-title mx-auto py-1 rounded">Log In</h2>
                     <p className="text-muted mb-0">Welcome back. Let’s continue cooking.</p>
                 </div>
 

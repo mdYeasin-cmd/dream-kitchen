@@ -56,7 +56,7 @@ const Registration = () => {
         <div className="form-container shadow p-4 my-5 mx-auto rounded">
             <div className="auth-card">
                 <div className="auth-header text-center">
-                    <h2 className="services-title mx-auto py-1 rounded">Registration</h2>
+                    <h2 className="services-title auth-title mx-auto py-1 rounded">Registration</h2>
                     <p className="text-muted mb-0">Create your account to start cooking.</p>
                 </div>
                 <Form className="auth-form" onSubmit={handleRegistration}>
