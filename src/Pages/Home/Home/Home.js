@@ -7,6 +7,7 @@ import Newsletter from '../Newsletter/Newsletter';
 import Reputation from '../Reputation/Reputation';
 import SeasonalHighlights from '../SeasonalHighlights/SeasonalHighlights';
 import './Home.css';
+import ReusableButton from '../../Shared/ReusableButton/ReusableButton';
 
 const Home = () => {
 
@@ -32,11 +33,6 @@ const Home = () => {
             <section className="home-section home-newsletter">
                 <Newsletter></Newsletter>
             </section>
-        </main>
-    );
-};
-
-export default Home;
             <section className="home-section home-contact">
                 <div className="container">
                     <div className="text-center mb-5">
@@ -106,3 +102,8 @@ export default Home;
                     </div>
                 </div>
             </section>
+        </main>
+    );
+};
+
+export default Home;            
