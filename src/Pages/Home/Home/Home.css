@@ -73,6 +73,10 @@
     --section-delay: 0.2s;
 }
 
+.home-contact {
+    --section-delay: 0.18s;
+}
+
 .home-page h1,
 .home-page h2,
 .home-page h3,
@@ -137,6 +141,74 @@
     object-fit: cover;
 }
 
+.home-contact .contact-details {
+    background: rgba(255, 255, 255, 0.82);
+    border-radius: 26px;
+    padding: 2rem;
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(10px);
+}
+
+.home-contact .contact-list {
+    display: grid;
+    gap: 1.25rem;
+    margin-bottom: 1.75rem;
+}
+
+.home-contact .contact-label {
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 0.35rem;
+}
+
+.home-contact .contact-value {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--ink);
+}
+
+.home-contact .contact-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent-dark);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.home-contact .contact-form {
+    background: var(--paper);
+    border-radius: 28px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow-strong);
+}
+
+.home-contact .form-label {
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.home-contact .form-control {
+    border-radius: 16px;
+    border: 1px solid rgba(69, 52, 43, 0.15);
+    padding: 0.85rem 1rem;
+    font-size: 0.98rem;
+}
+
+.home-contact .form-control:focus {
+    border-color: rgba(var(--dk-accent-rgb), 0.55);
+    box-shadow: 0 0 0 0.2rem rgba(var(--dk-accent-rgb), 0.18);
+}
+
+.home-contact .contact-note {
+    font-size: 0.95rem;
+}
+
 @keyframes fade-up {
     from {
         opacity: 0;
@@ -152,6 +224,11 @@
     .home-section {
         padding: 3.5rem 0;
     }
+
+    .home-contact .contact-details,
+    .home-contact .contact-form {
+        padding: 1.75rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -161,5 +238,9 @@
 
     .home-page .food-card .card-body {
         padding: 1.25rem;
+    }
+
+    .home-contact .contact-form {
+        padding: 1.5rem;
     }
 }
